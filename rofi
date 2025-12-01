@@ -1,0 +1,86 @@
+# config.rasi
+configuration {
+  modi: "drun,run";
+  show-icons: true;
+  font: "JetBrainsMono Nerd Font 11";
+}
+@theme "matt-cream"
+
+# matt-cream.rasi
+/* Matt cream inverted theme: warm cream bg, dark text */
+
+* {
+    background-color: #E8DCC0;
+    text-color:       #161614;
+    font: "JetBrainsMono Nerd Font 11";
+
+    /* kill all default borders everywhere */
+    border:       0px;
+    border-radius: 0px;
+}
+
+/* Whole window: the ONLY thing with a border */
+window {
+    border:       2px;
+    border-color: #161614;
+    border-radius: 8px;
+    padding:      12px;
+    background-color: #E8DCC0;
+}
+
+/* Layout container */
+mainbox {
+    padding: 6px;
+}
+
+/* Top input bar */
+inputbar {
+    padding:      4px 8px;
+    background-color: #E8DCC0;
+}
+
+/* Text entry field */
+entry {
+    padding:      3px 6px;
+    background-color: #F0EAD2;
+    text-color:   #161614;
+}
+
+prompt {
+    enabled: false;
+}
+
+/* List of entries */
+listview {
+    padding: 4px 0px;
+    spacing: 4px;
+}
+
+/* Each item */
+element {
+    padding:      3px 8px;
+    background-color: transparent;
+    text-color:   #161614;
+}
+
+/* Selected item */
+element selected {
+    background-color: #161614;
+    text-color:       #F0EAD2;
+}
+
+element-text selected {
+    background-color: #161614;
+    text-color:       #F0EAD2;
+}
+
+/* Icons next to entries */
+element-icon {
+    size: 18;
+}
+
+/* Icons next to entries */
+element-icon selected {
+    background-color: #161614;
+    size: 18;
+}
