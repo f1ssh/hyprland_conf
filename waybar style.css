@@ -1,0 +1,63 @@
+/* ──────────────────────────────────────
+   Matt Dark Monochrome Waybar
+   ────────────────────────────────────── */
+
+@define-color bg-main   #1C1F1D;
+@define-color bg-dark   #161614;
+@define-color cream     #F0EAD2;
+@define-color teal      #1F6F8B;
+@define-color leather   #8B5033;
+@define-color olive     #7F8C3A;
+
+/* Bar itself: cream background, dark text */
+#waybar {
+  background: @cream;
+  color: @bg-dark;
+  font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", monospace;
+  font-size: 11pt;
+  padding: 3px 10px;
+}
+
+/* Each module is a dark pill sitting on the cream bar */
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#tray,
+#custom-arch,
+#custom-separator {
+  background: @bg-main;
+  color: @cream;
+  border-radius: 6px;
+  padding: 4px 10px;
+  margin: 2px 4px;
+}
+
+/* Active workspace: subtle cream outline */
+#workspaces button {
+  padding: 0 8px;
+  border-radius: 4px;
+  background: transparent;
+  color: @cream;
+}
+
+#workspaces button.focused {
+  border: 1px solid @cream;
+}
+
+/* Optional: use teal only as a tiny accent, e.g. for “good” states */
+
+#battery.good,
+#network.connected,
+#pulseaudio {
+  border-bottom: 2px solid @teal;
+}
+
+/* Tooltip styling */
+tooltip {
+  background: @bg-main;
+  color: @cream;
+  border-radius: 6px;
+  border: 1px solid @cream;
+}
